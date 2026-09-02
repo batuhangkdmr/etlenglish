@@ -58,22 +58,6 @@ export const mastersAdvantages = [
   "Başvuru Süreci Danışmanlığı",
 ] as const;
 
-export const statistics = [
-  { value: 25, suffix: "+", label: "Ülkede eğitim ağı" },
-  { value: 78900, suffix: "+", label: "Öğrenci" },
-  { value: 10000, suffix: "+", label: "Göçmenlik kabulü" },
-  { value: 50, suffix: "+", label: "Uzman kadro" },
-] as const;
-
-export const experience = {
-  years: 25,
-  advantages: [
-    "Yüzlerce Okula Başvuru İmkanı",
-    "Uluslararası Eğitim Danışmanlığı",
-    "IELTS & TOEFL Hazırlık Programları",
-  ],
-} as const;
-
 export const processSteps = [
   { number: "01", title: "Hedefinizi Belirleyelim", description: "Akademik ve kişisel beklentilerinizi birlikte netleştirelim." },
   { number: "02", title: "Okul ve Programı Seçelim", description: "Profilinize uygun ülke, okul ve program alternatiflerini değerlendirelim." },

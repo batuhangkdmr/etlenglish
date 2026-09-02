@@ -1,12 +1,12 @@
 import { ConsultationCTA } from "@/components/home/ConsultationCTA";
 import { DestinationsSection } from "@/components/home/DestinationsSection";
-import { ExperienceSection } from "@/components/home/ExperienceSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { MastersSection } from "@/components/home/MastersSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
-import { StatsSection } from "@/components/home/StatsSection";
+import { EnglishGoalFinder } from "@/components/home/EnglishGoalFinder";
+import { GlobalEducationJourney } from "@/components/home/GlobalEducationJourney";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { UniversitySection } from "@/components/home/UniversitySection";
 import { WhyEtlSection } from "@/components/home/WhyEtlSection";
@@ -55,8 +55,8 @@ export default function HomePage() {
         <ServicesSection />
         <UniversitySection />
         <MastersSection />
-        <StatsSection />
-        <ExperienceSection />
+        <GlobalEducationJourney />
+        <EnglishGoalFinder />
         <ProcessSection />
         <PartnersSection />
         <TestimonialsSection />
