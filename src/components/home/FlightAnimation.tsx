@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { useReducedMotion } from "motion/react";
 
 const bannerSegments = Array.from({ length: 10 }, (_, index) => index);
 
@@ -11,23 +11,7 @@ export function FlightAnimation() {
 
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-30 overflow-hidden">
-      <motion.div
-        initial={{ x: "-12vw", y: "78vh", opacity: 0 }}
-        animate={{
-          x: ["-12vw", "10vw", "42vw", "75vw", "112vw"],
-          y: ["78vh", "70vh", "52vh", "30vh", "8vh"],
-          opacity: [0, 1, 1, 1, 0],
-        }}
-        transition={{
-          duration: 8.5,
-          delay: 0.2,
-          repeat: Infinity,
-          repeatDelay: 3,
-          ease: [0.33, 0.05, 0.2, 1],
-          times: [0, 0.04, 0.45, 0.78, 1],
-        }}
-        className="hero-flight-mover absolute top-0 left-0 h-[clamp(70px,8vw,110px)] w-[clamp(290px,32vw,520px)] [perspective:1000px] will-change-transform transform-gpu"
-      >
+      <div className="hero-flight-mover absolute top-0 left-0 h-[clamp(70px,8vw,110px)] w-[clamp(290px,32vw,520px)] [perspective:1000px]">
         <div className="relative size-full">
         <div className="hero-flight-banner absolute top-1/2 left-0 h-[clamp(35px,4vw,65px)] w-[clamp(150px,20vw,300px)] -translate-y-1/2 overflow-hidden rounded-[0.25rem_0.8rem_0.8rem_0.25rem] border border-brand-navy/10 bg-white/95 shadow-[0_10px_25px_-16px_rgba(3,47,79,0.55)]">
           <div className="absolute inset-0 flex">
@@ -50,7 +34,7 @@ export function FlightAnimation() {
           <img src="https://pngimg.com/uploads/plane/plane_PNG5253.png" alt="" className="hero-aircraft block h-auto w-full object-contain" />
         </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
