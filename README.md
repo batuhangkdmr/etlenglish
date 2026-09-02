@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ETL English
 
-## Getting Started
+Modern, responsive yurt dışı eğitim danışmanlığı web sitesi. ETL English; dil okulları, üniversite, yüksek lisans ve vize danışmanlığı hizmetlerini güven veren, global odaklı bir dijital deneyimle sunar.
 
-First, run the development server:
+## Proje Hakkında
+
+ETL English ana sayfası, ziyaretçiyi ilk etkileşimden danışmanlık talebine kadar yönlendiren modern bir eğitim danışmanlığı deneyimi olarak tasarlandı.
+
+Öne çıkan bölümler:
+
+- Responsive desktop ve mobil navigation
+- Mobilde soldan açılan, kompakt drawer menü
+- Hero alanında premium flight animation ve ETL English banner
+- Ülke ve dil okulu destinasyonları
+- Üniversite ve yüksek lisans içerikleri
+- 3 aşamalı ücretsiz danışmanlık formu
+- Global harita ve destinasyon marker’ları içeren modern footer
+- WhatsApp iletişim butonu ve back-to-top kontrolü
+- SEO metadata ve Organization JSON-LD yapılandırması
+
+## Teknolojiler
+
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Motion](https://motion.dev/)
+- [Lucide React](https://lucide.dev/)
+
+## Kurulum
+
+Node.js 20+ ve npm gereklidir.
+
+```bash
+git clone https://github.com/batuhangkdmr/etlenglish.git
+cd etlenglish
+npm install
+```
+
+## Geliştirme
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Uygulama [http://localhost:3000](http://localhost:3000) adresinde çalışır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Komutlar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Geliştirme sunucusunu başlatır
+npm run lint     # ESLint kontrollerini çalıştırır
+npm run build    # Production build oluşturur
+npm run start    # Production sunucusunu başlatır
+```
 
-## Learn More
+## Proje Yapısı
 
-To learn more about Next.js, take a look at the following resources:
+```text
+src/
+├── app/                     # App Router, layout ve global stiller
+├── components/
+│   ├── home/                # Ana sayfa sectionları
+│   ├── layout/              # Header, footer ve layout bileşenleri
+│   └── shared/              # Tekrar kullanılabilir UI bileşenleri
+├── data/                    # Navigation, site ve ana sayfa verileri
+├── hooks/                   # Custom React hook'ları
+├── lib/                     # Yardımcı fonksiyonlar
+└── types/                   # TypeScript tipleri
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tasarım Yaklaşımı
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tasarım sistemi ETL English’in lacivert, mavi ve pembe marka renkleri üzerine kuruludur. Bileşenler mobil öncelikli responsive yaklaşım, erişilebilir focus durumları, düşük yoğunluklu motion efektleri ve içerik odaklı bir tipografi sistemiyle hazırlanmıştır.
 
-## Deploy on Vercel
+Footer’da kullanılan dünya haritası ve destinasyon rotaları dekoratif SVG olarak çalışır. Harita interactive değildir ve navigation işlevi taşımaz.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Form Notu
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ücretsiz danışmanlık formu üç adımdan oluşur ve istemci tarafında alan doğrulaması içerir. Form gönderimi şu an başarı durumunu frontend üzerinde gösterir; gerçek CRM, e-posta veya API entegrasyonu ayrıca bağlanabilir.
+
+## Kalite Kontrolleri
+
+Production öncesi şu kontroller çalıştırılmalıdır:
+
+```bash
+npm run lint
+npm run build
+```
+
+## Lisans
+
+Bu proje ETL English için hazırlanmıştır. İçerik, marka varlıkları ve görseller izinsiz kullanılamaz.
