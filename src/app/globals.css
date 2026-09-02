@@ -68,14 +68,14 @@ a {
 .site-topbar {
   height: 42px;
   overflow: hidden;
-  transition: height 300ms ease, opacity 300ms ease, transform 300ms ease;
+  transition: opacity 300ms ease, transform 300ms ease;
 }
 
 .site-main-navbar {
   height: 86px;
   border-bottom: 1px solid rgb(6 63 102 / 0.08);
   box-shadow: 0 4px 24px -16px rgb(6 63 102 / 0.22);
-  transition: height 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+  transition: background-color 300ms ease, box-shadow 300ms ease;
 }
 
 .site-header[data-scrolled="true"] .site-topbar {

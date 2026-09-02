@@ -1,12 +1,18 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export function StickyHeader({ children }: { children: ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const scrolledRef = useRef(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const nextValue = window.scrollY > 20;
+      if (nextValue === scrolledRef.current) return;
+      scrolledRef.current = nextValue;
+      setIsScrolled(nextValue);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
