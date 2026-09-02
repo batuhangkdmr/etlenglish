@@ -12,11 +12,10 @@ export function FlightAnimation() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-30 overflow-hidden">
       <motion.div
-        initial={{ x: "-12vw", y: "78vh", scale: 1.05, opacity: 0 }}
+        initial={{ x: "-12vw", y: "78vh", opacity: 0 }}
         animate={{
           x: ["-12vw", "10vw", "42vw", "75vw", "112vw"],
           y: ["78vh", "70vh", "52vh", "30vh", "8vh"],
-          scale: [1.05, 1.03, 1, 0.91, 0.82],
           opacity: [0, 1, 1, 1, 0],
         }}
         transition={{
@@ -27,7 +26,7 @@ export function FlightAnimation() {
           ease: [0.33, 0.05, 0.2, 1],
           times: [0, 0.04, 0.45, 0.78, 1],
         }}
-        className="absolute top-0 left-0 h-[clamp(70px,8vw,110px)] w-[clamp(290px,32vw,520px)] [perspective:1000px]"
+        className="hero-flight-mover absolute top-0 left-0 h-[clamp(70px,8vw,110px)] w-[clamp(290px,32vw,520px)] [perspective:1000px] will-change-transform transform-gpu"
       >
         <div className="relative size-full">
         <div className="hero-flight-banner absolute top-1/2 left-0 h-[clamp(35px,4vw,65px)] w-[clamp(150px,20vw,300px)] -translate-y-1/2 overflow-hidden rounded-[0.25rem_0.8rem_0.8rem_0.25rem] border border-brand-navy/10 bg-white/95 shadow-[0_10px_25px_-16px_rgba(3,47,79,0.55)]">
@@ -48,7 +47,7 @@ export function FlightAnimation() {
         <div className="absolute top-1/2 right-0 z-20 w-[clamp(100px,11vw,230px)] -translate-y-1/2 rotate-[-11deg] [transform-style:preserve-3d]">
           {/* Existing transparent aircraft asset, kept as a single decorative plane instance. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://pngimg.com/uploads/plane/plane_PNG5253.png" alt="" className="block h-auto w-full object-contain drop-shadow-[0_14px_12px_rgba(3,47,79,0.2)]" />
+          <img src="https://pngimg.com/uploads/plane/plane_PNG5253.png" alt="" className="hero-aircraft block h-auto w-full object-contain" />
         </div>
         </div>
       </motion.div>

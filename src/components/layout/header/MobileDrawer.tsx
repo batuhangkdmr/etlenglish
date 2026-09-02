@@ -69,7 +69,7 @@ export function MobileDrawer({ isOpen, onClose, triggerRef }: MobileDrawerProps)
         type="button"
         aria-label="Menüyü kapat"
         onClick={onClose}
-        className="mobile-drawer-backdrop fixed inset-x-0 bottom-0 top-[var(--mobile-header-offset,104px)] z-[80] cursor-default border-0 bg-brand-navy-dark/45 p-0 backdrop-blur-xs"
+        className="mobile-drawer-backdrop fixed inset-x-0 bottom-0 top-[var(--mobile-header-offset,104px)] z-[80] cursor-default border-0 bg-brand-navy-dark/45 p-0"
       />
       <div
         ref={drawerRef}

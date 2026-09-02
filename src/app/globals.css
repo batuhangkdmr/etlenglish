@@ -220,6 +220,12 @@ a {
   to { transform: translateY(-2px) rotateY(6deg) scaleY(1.02); }
 }
 
+@media (max-width: 767px) {
+  .hero-aircraft {
+    backface-visibility: hidden;
+  }
+}
+
 .footer-map-pulse {
   transform-box: fill-box;
   transform-origin: center;
@@ -240,6 +246,10 @@ a {
 }
 
 @media (max-width: 767px) {
+  .hero-flight-banner-segment {
+    animation: none;
+  }
+
   .footer-map-label,
   .footer-map-marker-IE,
   .footer-map-marker-MT,
