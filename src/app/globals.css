@@ -196,14 +196,21 @@ a {
 .consultation-step { animation: consultation-step-in 300ms cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 .hero-flight-banner {
-  perspective: 900px;
-  transform-style: preserve-3d;
+  isolation: isolate;
+}
+
+.hero-flight-mover,
+.hero-london-card,
+.hero-advisor-card {
+  will-change: transform;
 }
 
 .hero-flight-mover {
   animation: hero-flight-path 11.5s 200ms cubic-bezier(0.33, 0.05, 0.2, 1) infinite both;
-  will-change: transform, opacity;
 }
+
+.hero-london-card { animation: hero-london-float 5.5s ease-in-out infinite; }
+.hero-advisor-card { animation: hero-advisor-float 6s 500ms ease-in-out infinite; }
 
 @keyframes hero-flight-path {
   0% { opacity: 0; transform: translate3d(-12vw, 78vh, 0); }
@@ -215,9 +222,26 @@ a {
   100% { opacity: 0; transform: translate3d(-12vw, 78vh, 0); }
 }
 
+@keyframes hero-london-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+}
+
+@keyframes hero-advisor-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 7px, 0); }
+}
+
 @media (max-width: 767px) {
   .hero-aircraft {
     backface-visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-flight-mover {
+    animation: none;
+    opacity: 0;
   }
 }
 
